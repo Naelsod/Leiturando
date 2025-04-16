@@ -1,0 +1,70 @@
+.sobre-nos {
+  background-color: #f4e9e4;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sobre-nos .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sobre-nos .esquerda {
+  flex: 1 1 300px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.sobre-nos .esquerda img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.sobre-nos .esquerda p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.sobre-nos .redes a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.sobre-nos .redes img {
+  width: 30px;
+  transition: transform 0.3s ease;
+}
+
+.sobre-nos .redes img:hover {
+  transform: scale(1.2);
+}
+
+.sobre-nos .direita {
+  flex: 1 1 500px;
+}
+
+.sobre-nos .direita h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.sobre-nos .direita h2 span {
+  font-style: italic;
+  color: #000;
+}
+
+.sobre-nos .direita p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #444;
+}
