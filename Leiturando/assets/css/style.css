@@ -1,12 +1,66 @@
+*{
+margin: 0;
+}
+/*header*/
+.topo {
+  background-color: #E1D6D0;
+  padding: 15px 01;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-family: 'Lucida Handwriting';
+}
+
+.topo .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topo .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topo .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.topo .logo span {
+  font-size: 1.8em;
+  font-family: 'Lucida Handwriting', cursive;
+  color: #222;
+}
+
+.topo .menu a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.topo .menu a:hover {
+  color: #000;
+}
+/* Abaixo temos o separador*/
+.separador{
+  padding: 45px;
+  background-color: #2C2A2A;
+}
+/* Abaixo temos a primeira seção*/
 .sobre-nos {
-  background-color: #f4e9e4;
+  background-color: #F0E5DE;
   padding: 60px 20px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'League Spartan';
 }
 
 .sobre-nos .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 0 20px;
   display: flex;
   gap: 50px;
   align-items: center;
@@ -15,32 +69,35 @@
 
 .sobre-nos .esquerda {
   flex: 1 1 300px;
+  margin: 0 0 0 110px;
   text-align: center;
-  background-color: #fff;
+  background-color: #968585;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20 0 60 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .sobre-nos .esquerda img {
-  width: 100%;
+  width: 80%;
   border-radius: 12px;
   margin-bottom: 10px;
 }
 
 .sobre-nos .esquerda p {
-  font-size: 14px;
+  font-size: 24px;
+  font-family: 'League Spartan' ;
   margin-bottom: 10px;
   color: #333;
 }
 
 .sobre-nos .redes a {
+ 
   margin: 0 10px;
   display: inline-block;
 }
 
 .sobre-nos .redes img {
-  width: 30px;
+  width: 60px;
   transition: transform 0.3s ease;
 }
 
@@ -55,7 +112,7 @@
 .sobre-nos .direita h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  font-family: 'Georgia', serif;
+  font-family: 'Lucida Handwriting';
 }
 
 .sobre-nos .direita h2 span {
@@ -67,4 +124,392 @@
   font-size: 1.1em;
   line-height: 1.6;
   color: #444;
+}
+/*abaixo temos a seção das campanhas*/
+.campanha {
+  background-color: #f6eee9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.campanha h2 {
+  font-family: 'Lucida Handwriting', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.campanha h3 {
+  font-family: 'Lucida Handwriting', cursive;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+.campanha .bloco {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  border-radius: 20px;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.bloco p {
+  margin: 0;
+}
+
+.bloco.amarelo {
+  background-color: #f4a928;
+}
+
+.bloco.azul-claro {
+  background-color: #6f93ad;
+  border-top-right-radius: 40px;
+}
+
+.bloco.azul-escuro {
+  background-color: #1b2e66;
+  color: #fff;
+  border-top-left-radius: 40px;
+}
+
+.bloco.vermelho {
+  background-color: #d94d4d;
+  color: #fff;
+  border-top-right-radius: 40px 0 0 0 ;
+}
+
+.decorador {
+  position: absolute;
+  background-color: #111;
+  width: 20px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.decorador.esquerda {
+  left: -30px;
+}
+
+.decorador.direita {
+  right: -30px;
+}
+/* Abaixo a seção sobre os clubes existentes */
+.clubes-section {
+  padding: 60px 20px;
+  background-color: #f4ece7;
+  text-align: center;
+}
+
+.titulo-clubes {
+  font-family: 'Cursive', serif;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.titulo-clubes span {
+  font-style: italic;
+}
+
+.clubes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clube-card {
+  background-color: #4d4d4d;
+  color: white;
+  max-width: 300px;
+  padding: 30px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.clube-card h3 {
+  font-family: 'Cursive', serif;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.clube-card h3 span {
+  font-style: italic;
+  display: block;
+}
+
+.clube-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.clube-card button {
+  background-color: #fbb040;
+  color: black;
+  font-family: 'Cursive', serif;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.clube-card button:hover {
+  background-color: #e09b32;
+}
+/* Seção das constelações*/
+.custom-section {
+  background-color: #7B7E97;
+  color: white;
+  padding: 4rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.info-box {
+  background-color: #1c295a;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 768px;
+  margin: 0 auto 3rem;
+}
+
+.info-text {
+  color: white;
+  font-size: 0.875rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-item {
+  background-color: #1c295a;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.grid-item p {
+  font-size: 0.875rem;
+}
+
+.grid-item-special {
+  grid-column-start: 2;
+}
+
+.star-left, .star-right, .star-bottom-right {
+  position: absolute;
+  width: 8rem;
+}
+
+.star-left {
+  left: 0;
+  top: 0;
+}
+
+.star-right {
+  right: 0;
+  top: 0;
+}
+
+.star-bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 10rem;
+}
+/*ajude nos sesão*/
+.apoio {
+  background-color: #f7e9e2;
+  padding: 60px 20px;
+  font-family: sans-serif;
+}
+
+.apoio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.apoio-left {
+  flex: 1 1 400px;
+  padding: 20px;
+}
+
+.apoio-left h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.apoio-left h2 span {
+  font-weight: bold;
+}
+
+.apoio-left p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.apoio-right {
+  flex: 1 1 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.qr-box {
+  background-color: #b39c95;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.qr {
+  background-color: #f3f3f3;
+  padding: 40px 20px;
+  font-family: "Brush Script MT", cursive;
+  font-size: 2em;
+}
+
+.email span {
+  font-size: 1.1em;
+}
+
+.email a {
+  text-decoration: none;
+  color: #000;
+  font-style: italic;
+}
+/* Foooter abaixo */
+.rodape {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 0px 10 0;
+  position: relative;
+}
+
+.rodape .container {
+  max-width: 1200px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rodape .coluna {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.rodape .coluna.esquerda {
+  position: relative;
+}
+
+.rodape .coluna.esquerda img {
+  max-width: 100%;
+  margin: 0 120 0 0;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 3.1rem;
+  transform: translateY(42%);
+  max-height: 450px; /* Ajusta conforme sua imagem */
+}
+.rodape .coluna.direita img {
+  max-width: 100%;
+  margin: 0 0 0 40;
+  height: auto;
+}
+
+.rodape .centro h3 {
+  font-family: 'Lucida Handwriting', cursive;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.linha-contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.linha-contato img {
+  transition: transform 0.3s ease;
+  width: 54px;
+  height: 54px;
+}
+.linha-contato img:hover {
+  transform: scale(1.2);
+  width: 54px;
+  height: 54px;
+}
+
+
+/*Importação pra celular */
+/*menu Mobile*/
+.menu-toglle{
+  display:none;
+  cursor: pointer;
+  color: #ffc;
+  font-size: 1.5rem;
+  
+}
+@media (max-width: 768px) {
+  .navbar{
+      position: relative;
+  }
+  .menu-toglle{
+      display:block;
+  }
+  .menu{
+      display:none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  }
+  #menu-checkbox:checked ~ .menu{
+      display: flex;
+  }
+  .nav-link{
+      padding: 1rem;
+  }
 }
