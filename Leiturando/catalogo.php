@@ -71,10 +71,8 @@ $resultado = mysqli_query($conn, $query);
     <?php while($resenha = mysqli_fetch_assoc($resultado)): ?>
       <div class="livro">
         <img src="uploads/<?= htmlspecialchars($resenha['capa']) ?>" alt="<?= htmlspecialchars($resenha['titulo']) ?>">
-        <form action="resenha.php" method="GET">
-          <input type="hidden" name="id" value="<?= $resenha['id'] ?>">
-          <button class="botao">Ler mais</button>
-        </form>
+        <br>
+        <a href="resenha.php?id=<?= $resenha['id'] ?>" class="botao">Ler mais</a>
       </div>
     <?php endwhile; ?>
   </div>

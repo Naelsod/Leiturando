@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leiturando</title>
 
-    <!-- Fonte usada no Figma, se quiser -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
-
-    <!-- Tailwind config inline (pra personalizar fontes se quiser) -->
-  
   </head>
 <?php include('includes/header.php'); ?>
 <link rel="stylesheet" href="assets/css/style.css">
