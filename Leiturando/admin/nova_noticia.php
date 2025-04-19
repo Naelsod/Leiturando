@@ -81,32 +81,20 @@ if (!isset($_SESSION['user_id'])) {
 <body>
   <a href="dashboard.php">Voltar</a>
   <div class="container">
-    <h2>Adicionar Nova Resenha</h2>
-    <form action="processa_resenha.php" method="POST" enctype="multipart/form-data">
+    <h2>Adicionar Nova Noticia</h2>
+    <form action="processa_noticia.php" method="POST" enctype="multipart/form-data">
       
-    <label for="nome_livro">Título do Livro:</label>
-      <input type="text" name="nome_livro" id="nome_livro" required>
-
-      <label for="autor_livro">Autor do livro:</label>
-      <input type="text" name="autor_livro" id="autor_livro" required>
-
-      <label for="genero">genero do livro?:</label>
-      <input type="text" name="genero" id="genero" required>
-
-      <label for="titulo">Título da resenha (é oque aparece na  pagina de resenhas):</label>
+    <label for="titulo">Título da Noticia:</label>
       <input type="text" name="titulo" id="titulo" required>
+
+      <label for="fonte">Fonte da Noticia:</label>
+      <input type="text" name="fonte" id="fonte" required>
+
+      <label for="conteudo">Conteudo da Noticia</label>
+      <textarea type="text" name="conteudo" rows="6" id="conteudo" required></textarea>
       
-      <label for="autor_resenha">Autor da Resenha:</label>
-      <input type="text" name="autor_resenha" id="autor_resenha" required>
-
-      <label for="capa">Capa do Livro (Imagem) em png:</label>
-      <input type="file" name="capa" id="capa" accept="image/*" required>
-
-      <label for="resumo">Resumo:</label>
-      <textarea name="resumo" id="resumo" rows="6" required></textarea>
-
         <div class="botoes">
-        <button type="submit">Cadastrar Resenha</button>
+        <button type="submit">Cadastrar Noticia</button>
         <button type="reset" style="background-color: #999;">Limpar</button>
         </div>
     </form>

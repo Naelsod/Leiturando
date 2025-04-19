@@ -1,4 +1,14 @@
 <?php
+session_start();
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['user_id'])) {
+    // Se não estiver logado, redireciona para o login
+    header("Location: login.php");
+    exit();
+}
+?>
+<?php
 include '../includes/conexao.php';
 
 // Verifica se os dados foram enviados
@@ -34,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             mysqli_stmt_bind_param($stmt, "sssssss", $titulo, $autor_resenha, $nome_livro, $autor_livro, $nome_arquivo, $genero, $resumo);
         
             if (mysqli_stmt_execute($stmt)) {
-                echo "<script>alert('Resenha cadastrada com sucesso!'); window.location.href='../catalogo.php';</script>";
+                echo "<script>alert('Resenha cadastrada com sucesso!'); window.location.href='../admin/nova_resenha.php';</script>";
             } else {
                 echo "Erro ao cadastrar resenha: " . mysqli_error($conn);
             }

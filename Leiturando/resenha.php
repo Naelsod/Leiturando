@@ -1,6 +1,6 @@
 <?php
 include 'includes/conexao.php';
-
+/* Essa parte do codigo peda um id especifico*/
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
     $sql = "SELECT * FROM resenhas WHERE id = ?";
@@ -39,7 +39,7 @@ if (isset($_GET['id'])) {
   margin: 40px auto;
   flex-wrap: wrap;
 }
-
+/**/
 .resenha-detalhe .esquerda {
   flex: 1;
   min-width: 250px;
@@ -86,25 +86,26 @@ if (isset($_GET['id'])) {
   font-size: 16px;
   line-height: 1.6;
 }
+/*O codigo abaixo pega as informações cada uma de seu id*/
 </style>
 <body>
     <a href="catalogo.php">CATALOGO</a>
     <div class="resenha-detalhe">
-  <div class="esquerda">
-  <img src="uploads/<?php echo htmlspecialchars($resenha['capa']); ?>" alt="Capa do livro">
-  <h3><strong></strong> <?php echo htmlspecialchars($resenha['nome_livro']); ?></h3>
-  <p><strong>Autor do livro:</strong> <?php echo htmlspecialchars($resenha['autor_livro']); ?></p>
-    <p><strong>Gênero:</strong> <?php echo htmlspecialchars($resenha['genero']); ?></p>
-    </div>
-  <div class="direita">
-        <h1><?php echo htmlspecialchars($resenha['titulo']); ?></h1>
-        <p><strong>Autor da resenha:</strong> <?php echo htmlspecialchars($resenha['autor_resenha']); ?></p>
-        <p>Publicada em <?= date('d/m/Y H:i', strtotime($resenha['data_publicacao'])) ?></P>
-        <h1>Resenha do livro</h1>
+        <div class="esquerda">
+            <img src="uploads/<?php echo htmlspecialchars($resenha['capa']); ?>" alt="Capa do livro">
+            <h3><strong></strong> <?php echo htmlspecialchars($resenha['nome_livro']); ?></h3>
+            <p><strong>Autor do livro:</strong> <?php echo htmlspecialchars($resenha['autor_livro']); ?></p>
+            <p><strong>Gênero:</strong> <?php echo htmlspecialchars($resenha['genero']); ?></p>
+        </div>
+        <div class="direita">
+            <h1><?php echo htmlspecialchars($resenha['titulo']); ?></h1>
+            <p><strong>Autor da resenha:</strong> <?php echo htmlspecialchars($resenha['autor_resenha']); ?></p>
+            <p>Publicada em <?= date('d/m/Y H:i', strtotime($resenha['data_publicacao'])) ?></P>
+            <h1>Resenha do livro</h1>
+        </div>
         <div class="resumo">
             <p><?php echo nl2br(htmlspecialchars($resenha['resumo'])); ?></p>
         </div>
-  </div>
-</div>
+    </div>
 </body>
 </html>

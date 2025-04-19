@@ -1,19 +1,22 @@
 <?php
 session_start();
 include '../includes/conexao.php';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $senha = $_POST['senha'] ?? '';
-    
+
     if (!empty($email) && !empty($senha)) {
-        $sql = "SELECT id, senha FROM users WHERE email = '$email'";
-        $result = $conn->query($sql);
-        
+        $stmt = $conn->prepare("SELECT id, senha FROM admins WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             if (password_verify($senha, $row['senha'])) {
                 $_SESSION['user_id'] = $row['id'];
-                header("Location: home.html");
+                header("Location: dashboard.php");
                 exit;
             } else {
                 echo "Senha incorreta!";
@@ -34,8 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <style>
-        body {
-    background-image: url(img/planofundo.jpg);
+body {
+    background-image: url(../assets/img/planofundo.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
